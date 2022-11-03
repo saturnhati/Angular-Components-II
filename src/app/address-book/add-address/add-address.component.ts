@@ -21,6 +21,9 @@ export class AddAddressComponent implements OnInit {
   addUser() {
     let user = new User(this.name, this.lastName, this.city, this.phoneNumber);
     this.sendUser.emit(user);
-    console.log(user);
+    this.name = '';
+    this.lastName = '';
+    this.city = '';
+    this.phoneNumber = undefined;
   }
 }
