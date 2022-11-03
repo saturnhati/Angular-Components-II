@@ -1,0 +1,14 @@
+<app-add-address (sendUser)="addUser($event)"></app-add-address>
+<div class="row">
+  <app-address-list
+    class="col"
+    [users]="users"
+    (deleteUser)="onDeleteUser($event)"
+    (detailContact)="onInfoContact($event)"
+  ></app-address-list>
+  <app-address-details
+    [contact]="infoContact"
+    class="col-lg-4"
+    *ngIf="infoContact"
+  ></app-address-details>
+</div>

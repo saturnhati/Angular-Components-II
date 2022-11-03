@@ -1,0 +1,43 @@
+<div class="row g-3 my-4">
+  <div class="col-md-6">
+    <input
+      [(ngModel)]="name"
+      type="text"
+      class="form-control"
+      placeholder="First Name"
+      required
+    />
+  </div>
+  <div class="col-md-6">
+    <input
+      [(ngModel)]="lastName"
+      type="text"
+      class="form-control"
+      placeholder="Last Name"
+      required
+    />
+  </div>
+  <div class="col-md-6">
+    <input
+      [(ngModel)]="city"
+      type="text"
+      class="form-control"
+      placeholder="City"
+      required
+    />
+  </div>
+  <div class="col-md-4">
+    <input
+      [(ngModel)]="phoneNumber"
+      type="number"
+      class="form-control"
+      placeholder="Phone Number"
+      required
+    />
+  </div>
+  <div class="col-2">
+    <button class="btn btn-primary" type="button" (click)="addUser()">
+      Add
+    </button>
+  </div>
+</div>
