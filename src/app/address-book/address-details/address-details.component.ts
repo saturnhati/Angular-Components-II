@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/classes/user';
 
 @Component({
@@ -8,8 +8,14 @@ import { User } from 'src/app/classes/user';
 })
 export class AddressDetailsComponent implements OnInit {
   @Input() contact?: User;
+  @Output() varContact = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  closeInfo() {
+    let contactInfo = null;
+    this.varContact.emit(contactInfo);
+  }
 }

@@ -8,6 +8,7 @@
   ></app-address-list>
   <app-address-details
     [contact]="infoContact"
+    (varContact)="closeInfo($event)"
     class="col-lg-4"
     *ngIf="infoContact"
   ></app-address-details>

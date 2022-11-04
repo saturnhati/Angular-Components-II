@@ -39,4 +39,8 @@ export class AddressBookPage implements OnInit {
   onInfoContact(user: User) {
     this.infoContact = user;
   }
+
+  closeInfo(varContact: User) {
+    this.infoContact = varContact;
+  }
 }
